@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto1_Diplomado_Web_MVC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto2_Diplomado_Web_MVC_UASD.web", "Proyecto2_Diplomado_Web_MVC_UASD.web\Proyecto2_Diplomado_Web_MVC_UASD.web.csproj", "{B6F28315-0464-4691-9236-1F876FC4F88E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto3_Diplomado_Web_MVC_UASD.web", "Proyecto3_Diplomado_Web_MVC_UASD.web\Proyecto3_Diplomado_Web_MVC_UASD.web.csproj", "{A0925413-140F-4AE2-A393-201C31167673}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B6F28315-0464-4691-9236-1F876FC4F88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6F28315-0464-4691-9236-1F876FC4F88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6F28315-0464-4691-9236-1F876FC4F88E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0925413-140F-4AE2-A393-201C31167673}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0925413-140F-4AE2-A393-201C31167673}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0925413-140F-4AE2-A393-201C31167673}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0925413-140F-4AE2-A393-201C31167673}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

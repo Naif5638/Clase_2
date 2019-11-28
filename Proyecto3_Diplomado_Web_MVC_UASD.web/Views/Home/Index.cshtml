@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Proyecto3_Diplomado_Web_MVC_UASD.web.Models.Persona>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listado de Vehiculos</h2>
+<div>
+    @{
+        var grid = new WebGrid(Model, defaultSort: "Nombre");
+    }
+
+    @grid.GetHtml(columns: grid.Columns(
+        grid.Column("Nombre", header: "Nombre"),
+        grid.Column("Apellidos", header: "Apellidos"),
+        grid.Column("FechaNacimiento", header: "FechaNacimiento")
+        ))
+</div>
+
