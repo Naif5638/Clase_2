@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29319.158
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto1_Diplomado_Web_MVC_UASD.web", "Proyecto1_Diplomado_Web_MVC_UASD.web\Proyecto1_Diplomado_Web_MVC_UASD.web.csproj", "{9963B63B-1E2C-4A1C-A829-83D58D1CC46F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto2_Diplomado_Web_MVC_UASD.web", "Proyecto2_Diplomado_Web_MVC_UASD.web\Proyecto2_Diplomado_Web_MVC_UASD.web.csproj", "{B6F28315-0464-4691-9236-1F876FC4F88E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9963B63B-1E2C-4A1C-A829-83D58D1CC46F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9963B63B-1E2C-4A1C-A829-83D58D1CC46F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9963B63B-1E2C-4A1C-A829-83D58D1CC46F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6F28315-0464-4691-9236-1F876FC4F88E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6F28315-0464-4691-9236-1F876FC4F88E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6F28315-0464-4691-9236-1F876FC4F88E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6F28315-0464-4691-9236-1F876FC4F88E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
