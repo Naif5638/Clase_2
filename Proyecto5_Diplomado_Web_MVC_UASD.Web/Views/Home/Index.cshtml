@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Proyecto5_Diplomado_Web_MVC_UASD.Web.Models.Pelicula>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <table>
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Director</th>
+                    <th>Autor Principal</th>
+                    <th>Num. Autores</th>
+                    <th>Duracion</th>
+                    <th>Estreno</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Titulo)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Director)</td>
+                    <td>@Html.DisplayFor(modelItem => item.AutorPrincipal)</td>
+                    <td>@Html.DisplayFor(modelItem => item.NumeroActores)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Duracion)</td>
+                    <td>@Html.DisplayFor(modelItem => item.AnoEstreno)</td>
+                </tr>
+                }
+            </tbody>
+            
+        </table>
+    </div>
+</body>
+</html>

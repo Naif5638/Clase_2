@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto3_Diplomado_Web_MVC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto4_Diplomado_Web_MVC_UASD.Web", "Proyecto4_Diplomado_Web_MVC_UASD.Web\Proyecto4_Diplomado_Web_MVC_UASD.Web.csproj", "{E9284BC5-C336-4A1A-9548-AD11178283B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto5_Diplomado_Web_MVC_UASD.Web", "Proyecto5_Diplomado_Web_MVC_UASD.Web\Proyecto5_Diplomado_Web_MVC_UASD.Web.csproj", "{5FD7AD0F-5F70-4A48-9007-B3B9778F7CA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{E9284BC5-C336-4A1A-9548-AD11178283B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9284BC5-C336-4A1A-9548-AD11178283B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9284BC5-C336-4A1A-9548-AD11178283B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD7AD0F-5F70-4A48-9007-B3B9778F7CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD7AD0F-5F70-4A48-9007-B3B9778F7CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD7AD0F-5F70-4A48-9007-B3B9778F7CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD7AD0F-5F70-4A48-9007-B3B9778F7CA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
