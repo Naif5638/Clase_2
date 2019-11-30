@@ -1,0 +1,69 @@
+﻿@model Desarrollo_Web_MVC_Pelicula.Web.Models.Pelicula
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Grabar</title>
+</head>
+<body>
+    <div>
+        <form action="/Home/Grabar" method="post">
+            <h2>Registro de Peliculas</h2>
+            <table class="">
+                <tr>
+                    <td>
+                        <input type="hidden" name="codigo" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Titulo</td>
+                    <td>
+                        <input type="text" name="Titulo" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Director</td>
+                    <td>
+                        <input type="text" name="Director" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Autor Principal</td>
+                    <td>
+                        <input type="text" name="AutorPrincipal" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>No. Actores</td>
+                    <td>
+                        <input type="text" name="NumActores" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Duracion</td>
+                    <td>
+                        <input type="text" name="Duracion" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Estreno</td>
+                    <td>
+                        <input type="text" name="Estreno" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2"></td>
+                    <td>
+                        <input type="submit" value="Confirmar" />
+                    </td>
+                </tr>
+            </table>
+        </form>        
+    </div>
+</body>
+</html>
