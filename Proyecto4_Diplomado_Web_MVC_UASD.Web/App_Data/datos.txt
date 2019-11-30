@@ -1,0 +1,1 @@
+Nombre:Jonathan Lorenzo<br>Comentarios:Probando el registro en stringWriter<hr>
