@@ -76,8 +76,8 @@ namespace Desarrollo_Web_MVC_Pelicula.Web.Models
         public Pelicula Detail(int codigo)
         {
             Conectar();
-            SqlCommand command = new SqlCommand("Select Codigo, Titulo, Director, AutorPrincipal, No_Autores, Duracion, Estreno"
-                + "From TBL_PELICULA WHERE Codigo = @codigo", con);
+            SqlCommand command = new SqlCommand("Select Codigo, Titulo, Director, AutorPrincipal, No_Actores, Duracion, Estreno"
+                + " From TBL_PELICULA WHERE Codigo = @codigo", con);
 
             command.Parameters.Add("@codigo", System.Data.SqlDbType.Int);
             command.Parameters["@codigo"].Value = codigo;
@@ -86,12 +86,13 @@ namespace Desarrollo_Web_MVC_Pelicula.Web.Models
             Pelicula pelicula = new Pelicula();
             if (reader.Read())
             {
+                pelicula.Codigo = int.Parse(reader["Codigo"].ToString());
                 pelicula.Titulo = reader["Titulo"].ToString();
                 pelicula.Director = reader["Director"].ToString();
                 pelicula.AutorPrincipal = reader["AutorPrincipal"].ToString();
-                pelicula.NumAutores = int.Parse(reader["No_Autores"].ToString());
-                pelicula.Duracion = double.Parse(reader["No_Autores"].ToString());
-                pelicula.Estreno = int.Parse(reader["No_Autores"].ToString());
+                pelicula.NumAutores = int.Parse(reader["No_Actores"].ToString());
+                pelicula.Duracion = double.Parse(reader["Duracion"].ToString());
+                pelicula.Estreno = int.Parse(reader["Estreno"].ToString());
             };
             con.Close();
             return pelicula;
@@ -102,21 +103,21 @@ namespace Desarrollo_Web_MVC_Pelicula.Web.Models
         {
             Conectar();
             SqlCommand command = new SqlCommand("Update TBL_PELICULA Set Titulo = @Titulo, Director = @Director," 
-                + "AutorPrincipal = @AutorPrincipal, No_Autores = @No_Autores, Duracion = @Duracion," 
+                + "AutorPrincipal = @AutorPrincipal, No_Actores = @No_Actores, Duracion = @Duracion," 
                 + "Estreno = @Estreno WHERE Codigo = @Codigo", con);
 
             command.Parameters.Add("@Codigo", System.Data.SqlDbType.Int);
             command.Parameters.Add("@Titulo", System.Data.SqlDbType.VarChar);
             command.Parameters.Add("@Director", System.Data.SqlDbType.VarChar);
             command.Parameters.Add("@AutorPrincipal", System.Data.SqlDbType.VarChar);
-            command.Parameters.Add("@No_Autores", System.Data.SqlDbType.Int);
+            command.Parameters.Add("@No_Actores", System.Data.SqlDbType.Int);
             command.Parameters.Add("@Duracion", System.Data.SqlDbType.Float);
             command.Parameters.Add("@Estreno", System.Data.SqlDbType.Int);
 
             command.Parameters["@Titulo"].Value = pelicula.Titulo;
             command.Parameters["@Director"].Value = pelicula.Director;
             command.Parameters["@AutorPrincipal"].Value = pelicula.AutorPrincipal;
-            command.Parameters["@NumAutores"].Value = pelicula.NumAutores;
+            command.Parameters["@No_Actores"].Value = pelicula.NumAutores;
             command.Parameters["@Duracion"].Value = pelicula.Duracion;
             command.Parameters["@Estreno"].Value = pelicula.Estreno;
             command.Parameters["@Codigo"].Value = pelicula.Codigo;

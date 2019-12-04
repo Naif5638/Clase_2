@@ -36,5 +36,27 @@ namespace Desarrollo_Web_MVC_Pelicula.Web.Controllers
             registroPelicula.Borrar(cod);
             return RedirectToAction("Index");
         }
+
+        public ActionResult Modificar(int cod)
+        {
+            RegistroPelicula registroPelicula = new RegistroPelicula();
+            Pelicula pelicula = registroPelicula.Detail(cod);
+            return View(pelicula);
+        }
+
+        [HttpPost]
+        public ActionResult Modificar(Pelicula pelicula)
+        {
+            if (ModelState.IsValid)
+            {
+                RegistroPelicula registroPelicula = new RegistroPelicula();
+
+                registroPelicula.Modificar(pelicula);
+
+                return this.RedirectToAction("Index");
+            }
+
+            return this.View();
+        }
     }
 }

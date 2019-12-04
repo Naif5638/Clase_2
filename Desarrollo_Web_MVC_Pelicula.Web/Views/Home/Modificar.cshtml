@@ -1,0 +1,54 @@
+﻿@model Desarrollo_Web_MVC_Pelicula.Web.Models.Pelicula
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Modificar</title>
+</head>
+<body>
+    <form method="post">
+        <div>
+            <table>
+                <tr>
+                    <td>Codigo</td>
+                    <td>@Html.TextBoxFor(model => model.Codigo, new {@readonly = "readonly"})</td>
+                </tr>
+                <tr>
+                    <td>Titulo</td>
+                    <td>@Html.TextBoxFor(model => model.Titulo)</td>
+                </tr>
+                <tr>
+                    <td>Director</td>
+                    <td>@Html.TextBoxFor(model => model.Director)</td>
+                </tr>
+                <tr>
+                    <td>Autor Principal</td>
+                    <td>@Html.TextBoxFor(model => model.AutorPrincipal)</td>
+                </tr>
+                <tr>
+                    <td>Num Actores</td>
+                    <td>@Html.TextBoxFor(model => model.NumAutores)</td>
+                </tr>
+                <tr>
+                    <td>Duracion</td>
+                    <td>@Html.TextBoxFor(model => model.Duracion)</td>
+                </tr>
+                <tr>
+                    <td>Estreno</td>
+                    <td>@Html.TextBoxFor(model => model.Estreno)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Confirmar" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>   
+</body>
+</html>
