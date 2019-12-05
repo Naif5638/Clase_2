@@ -1,0 +1,42 @@
+﻿@model MVC_CRUD_DiplomadoCodeFirst.Models.Models.Inscripcion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Inscripcion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Coursos.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Coursos.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estudiantes.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estudiantes.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Semestre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Semestre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.InscripcionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

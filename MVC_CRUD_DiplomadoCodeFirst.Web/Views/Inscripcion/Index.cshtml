@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MVC_CRUD_DiplomadoCodeFirst.Models.Models.Inscripcion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Coursos.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estudiantes.Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Semestre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Coursos.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estudiantes.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Semestre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.InscripcionId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.InscripcionId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.InscripcionId })
+        </td>
+    </tr>
+}
+
+</table>

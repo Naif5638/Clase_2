@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace MVC_CRUD_DiplomadoCodeFirst.Models.Models
 {
     public class Estudiante
     {
+        [Key]
         public int EstudianteId { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }

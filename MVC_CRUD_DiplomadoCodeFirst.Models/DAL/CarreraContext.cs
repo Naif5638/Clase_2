@@ -11,7 +11,7 @@ namespace MVC_CRUD_DiplomadoCodeFirst.Models.DAL
 {
     public class CarreraContext : DbContext
     {
-        public CarreraContext():base("CarreraContex")
+        public CarreraContext():base("CarreraContext")
         {            
         }
 

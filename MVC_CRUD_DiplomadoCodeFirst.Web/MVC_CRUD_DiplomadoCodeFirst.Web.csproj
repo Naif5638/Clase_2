@@ -127,7 +127,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CoursoController.cs" />
+    <Compile Include="Controllers\EstudianteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InscripcionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -169,6 +172,21 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Estudiante\Create.cshtml" />
+    <Content Include="Views\Estudiante\Delete.cshtml" />
+    <Content Include="Views\Estudiante\Details.cshtml" />
+    <Content Include="Views\Estudiante\Edit.cshtml" />
+    <Content Include="Views\Estudiante\Index.cshtml" />
+    <Content Include="Views\Courso\Create.cshtml" />
+    <Content Include="Views\Courso\Delete.cshtml" />
+    <Content Include="Views\Courso\Details.cshtml" />
+    <Content Include="Views\Courso\Edit.cshtml" />
+    <Content Include="Views\Courso\Index.cshtml" />
+    <Content Include="Views\Inscripcion\Create.cshtml" />
+    <Content Include="Views\Inscripcion\Delete.cshtml" />
+    <Content Include="Views\Inscripcion\Details.cshtml" />
+    <Content Include="Views\Inscripcion\Edit.cshtml" />
+    <Content Include="Views\Inscripcion\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -189,6 +207,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MVC_CRUD_DiplomadoCodeFirst.Models\MVC_CRUD_DiplomadoCodeFirst.Models.csproj">
+      <Project>{274725b5-b2ee-492f-abd7-53e69c883519}</Project>
+      <Name>MVC_CRUD_DiplomadoCodeFirst.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\CarreraContext.cs" />
+    <Compile Include="DAL\SeedDB.cs" />
     <Compile Include="Models\Courso.cs" />
     <Compile Include="Models\Estudiante.cs" />
     <Compile Include="Models\Inscripcion.cs" />
