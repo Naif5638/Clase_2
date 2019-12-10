@@ -175,6 +175,7 @@
     <Content Include="Views\Pelicula\Details.cshtml" />
     <Content Include="Views\Pelicula\Edit.cshtml" />
     <Content Include="Views\Pelicula\Index.cshtml" />
+    <Content Include="Views\Pelicula\ListPeliculas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -115,6 +115,19 @@ namespace MVC_CRUD_DiplomadoUASD.Web.Controllers
             return RedirectToAction("Index");
         }
 
+
+        public ActionResult ListPeliculas()
+        {
+            var peliculas = db.TBL_PELICULA.ToList();
+            return this.View(peliculas);
+        }
+
+        public JsonResult GetListJsonPeliculas()
+        {
+            var peliculas = db.TBL_PELICULA.ToList();
+            return Json(peliculas, JsonRequestBehavior.AllowGet);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
