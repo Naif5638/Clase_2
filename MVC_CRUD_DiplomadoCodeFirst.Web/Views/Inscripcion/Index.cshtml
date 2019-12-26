@@ -5,41 +5,68 @@
 }
 
 <h2>Index</h2>
+<div class="row">
+    <div class="col-sm-2">
+        <a class="btn btn-success" style="margin-bottom:10px" href="/Inscripcion/Create">
+            Create
+        </a>
+    </div>
+    <div class="col-sm-10">
+        <input class="form-control" id="input_search" name="search" type="text" placeholder="busqueda..." />
+    </div>
+</div>
 
-<p>
-    <a class="btn btn-success" href="/Inscripcion/Create">Create</a>
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Coursos.Descripcion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Estudiantes.Nombres)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Semestre)
-        </th>
-        <th></th>
-    </tr>
+<div class="row">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Coursos.Descripcion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Estudiantes.Nombres)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Semestre)
+                </th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Coursos.Descripcion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estudiantes.Nombres)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Semestre)
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" href="/Inscripcion/Edit?id=@item.InscripcionId">Edit</a> |
+                        <a class="btn btn-success" href="/Inscripcion/Details?id=@item.InscripcionId">Details</a> |
+                        <a class="btn btn-danger" href="/Inscripcion/Delete?id=@item.InscripcionId">Delete</a> |
+                    </td>
+                </tr>
+            }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Coursos.Descripcion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Estudiantes.Nombres)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Semestre)
-        </td>
-        <td>
-            <a class="btn btn-primary" href="/Inscripcion/Edit?id=@item.InscripcionId">Edit</a> |
-            <a class="btn btn-success" href="/Inscripcion/Details?id=@item.InscripcionId">Details</a> |
-            <a class="btn btn-danger" href="/Inscripcion/Delete?id=@item.InscripcionId">Delete</a> |
-        </td>
-    </tr>
+        </tbody>
+    </table>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("#input_search").on("keyup", function () {
+                var value = $(this).val().toLocaleLowerCase();
+                $("#table_body tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > 1)
+                });
+            });
+        });
+    </script>
 }
 
-</table>
