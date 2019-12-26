@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <a class="btn btn-success" href="/Pelicula/Create">Create New</a> 
 </p>
 <table class="table">
     <tr>
@@ -53,9 +53,9 @@
             @Html.DisplayFor(modelItem => item.Estreno)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Codigo }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Codigo }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Codigo })
+            <a class="glyphicon glyphicon-edit" href="/Pelicula/Edit?id=@item.Codigo"></a> |
+            <a class="glyphicon glyphicon-list" href="/Pelicula/Details?id=@item.Codigo"></a> |
+            <a class="glyphicon glyphicon-trash" href="/Pelicula/Delete?id=@item.Codigo"></a> 
         </td>
     </tr>
 }
